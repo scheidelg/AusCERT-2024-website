@@ -1,0 +1,75 @@
+# create the 'cmd' admonition
+.md-typeset .admonition.cmd,
+.md-typeset details.cmd {
+    border-color: rgb(0, 191, 165);
+}
+.md-typeset .cmd > .admonition-title,
+.md-typeset .cmd > summary {
+    background-color: rgba(0, 191, 165, 0.1);
+}
+.md-typeset .cmd > .admonition-title::before,
+.md-typeset .cmd > summary::before {
+    background-color: rgb(0, 191, 165);
+    -webkit-mask-image: var(--md-admonition-icon--cmd);
+            mask-image: var(--md-admonition-icon--cmd);
+}
+
+# create the 'reminder' admonition
+.md-typeset .admonition.reminder,
+.md-typeset details.reminder {
+    border-color: rgb(0, 191, 165);
+}
+.md-typeset .reminder > .admonition-title,
+.md-typeset .reminder > summary {
+    background-color: rgba(0, 191, 165, 0.1);
+}
+.md-typeset .reminder > .admonition-title::before,
+.md-typeset .reminder > summary::before {
+    background-color: rgb(0, 191, 165);
+    -webkit-mask-image: var(--md-admonition-icon--reminder);
+            mask-image: var(--md-admonition-icon--reminder);
+}
+
+/* remove the "copy to clipboard" icon an feature on "abstract" admonition
+   boxes, which are consistently and only used for command line results */
+   .abstract .md-clipboard {
+    visibility: hidden;
+}
+
+/*----------------------------------------------------------------------------
+Hack to create TOC entries for admonitions, without having header paragraphs
+show up in the body of the rendered content:
+
+ - Create the admonition.
+
+ - Add a header paragraph with the same text as the admonition, using this
+   style, just inside the admonition.
+   
+For example:
+
+-----start-----
+??? tip "Hints"
+    ### Hints {: .hidden_element }
+-----end-----
+(e.g., '### Hints {: .hidden_element }')
+
+This causes the header to not be visible and have zero margin, border,
+padding, height, and width (i.e., not take up any space on the page).  But
+since we're using the 'visibility' property instead of the 'display'
+property, the element is still technically being rendered and so is still used
+by Material to build the TOC.
+
+Note the use of '!important' to ensure that these style elements take
+precedence -- in particular for 'margin' and 'border'.
+
+- GJS 2024.05.06
+*/
+.hidden_element {
+    visibility: hidden !important;
+    margin: 0 !important;
+    border: 0 !important;
+    padding: 0 !important;
+    line-height: 0 !important;
+    height: 0 !important;
+    width: 0 !important;
+}
