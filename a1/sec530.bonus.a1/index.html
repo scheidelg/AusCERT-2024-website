@@ -890,8 +890,8 @@
 <h2 id="introduction">Introduction</h2>
 <p>In this lab, we'll get ready for our exploration by making sure that you have a valid Azure account and subscription to use for the rest of the labs.</p>
 <p>An Azure account is associated with an email address and includes contact information and billing details.<sup id="fnref:2"><a class="footnote-ref" href="#fn:2">1</a></sup></p>
-<p>A subscription is an agreement with Microsoft to use one or more Microsoft cloud platforms or services, for which charges accrue based on either a per-user license fee or on cloud-based resource consumption.<sup id="fnref:5"><a class="footnote-ref" href="#fn:5">2</a></sup> All Azure resources are associated with one and only one subscription, which in turn is associated with one and only one account.<sup id="fnref2:2"><a class="footnote-ref" href="#fn:2">1</a></sup> Without a subscription you won't be able to access the Azure cloud services!</p>
 <p>A Microsoft Entra ID tenant is a reserved Microsoft Entra ID service instance that an organization receives and owns once it signs up for a Microsoft cloud service such as Azure, Microsoft Intune, or Microsoft 365. Each tenant represents an organization, and is distinct and separate from other Microsoft Entra ID tenants.<sup id="fnref:6"><a class="footnote-ref" href="#fn:6">3</a></sup></p>
+<p>A subscription is an agreement with Microsoft to use one or more Microsoft cloud platforms or services, for which charges accrue based on either a per-user license fee or on cloud-based resource consumption.<sup id="fnref:5"><a class="footnote-ref" href="#fn:5">2</a></sup> A single Azure account can have multiple subscriptions, and each subscription can have multiple Azure resources, but each Azure resource is associated with one and only one subscription.<sup id="fnref2:2"><a class="footnote-ref" href="#fn:2">1</a></sup> Without a subscription you won't be able to access the Azure cloud services!</p>
 <h2 id="lab-preparation">Lab Preparation</h2>
 <p>If you're reading these instructions from the online electronic workbook (EWB), then you're connected to the Internet and able to browse the Web - so you should be ready to go!</p>
 <h2 id="step-by-step-instructions">Step-by-Step Instructions</h2>
@@ -1285,13 +1285,61 @@ h.e.l.p@gmail.com
 <div class="admonition tip">
 <p class="admonition-title">If the window doesn't refresh after a minute, then simply refresh your browser window.</p>
 </div>
+<details class="note">
+<summary>'Sorry, there was a problem saving your workbook to OneDrive.'</summary>
+<p>You might receive an error message:</p>
+<p><img alt="Sorry, there was a problem saving your workbook to OneDrive. Please download the workbook and upload it to OneDrive or copy your content and paste it into a new workbook." class="noborder" src="../media/excel-copy-error.png" /></p>
+<p>If you do, then the easiest thing to do is follow the instructions in the error message: Download the workbook and upload it to OneDrive.</p>
+<ol>
+<li>
+<p>Close the message dialog.</p>
+</li>
+<li>
+<p><strong>Click</strong> on the Microsoft Excel <strong>File</strong> menu option.</p>
+<p><img alt=" " class="noborder" src="../media/excel-file.png" /></p>
+</li>
+<li>
+<p>On the opened sidebar, <strong>click</strong> on the <strong>Save As</strong> menu option.</p>
+<p><img alt=" " class="noborder" src="../media/excel-save-as.png" /></p>
+</li>
+<li>
+<p>On the <strong>Save As</strong> page, <strong>click</strong> on <strong>Download a Copy</strong>.</p>
+<p><img alt=" " class="noborder" src="../media/excel-download-a-copy.png" /></p>
+<p>Follow any prompts to save a local copy.</p>
+</li>
+<li>
+<p>Open a new browser tab and browse to <a href="https://onedrive.live.com" rel="noopener" target="_blank">https://onedrive.live.com</a>.</p>
+<div class="admonition cmd">
+<p class="admonition-title">URL</p>
+<div class="highlight"><pre><span></span><code>https://onedrive.live.com
+</code></pre></div>
+</div>
+</li>
+<li>
+<p>You <strong>may</strong> be prompted to login to sign in to access OneDrive. If so, follow the prompts to do so...</p>
+<p><img alt=" " class="noborder" src="../media/onedrive-signin-prompt.png" /></p>
+<p>...until you are on the OneDrive page displaying your default OneDrive folders and files.</p>
+<p><img alt=" " class="noborder" src="../media/onedrive-default-page.png" /></p>
+</li>
+<li>
+<p>Find the downloaded <code>Azure-Notes.xlsx</code> file, and upload to OneDrive.</p>
+<p><img alt=" " class="noborder" src="../media/onedrive-upload.png" /></p>
+</li>
+<li>
+<p>Open the uploaded <code>Azure-Notes.xlsx</code> file.</p>
+</li>
+<li>
+<p>Close the browser tab that is accessing the <strong>original</strong> read-only copy of the notebook.</p>
+</li>
+</ol>
+</details>
 </li>
 </ol>
 <details class="tip">
 <summary>Conserving Screen Real Estate</summary>
 <p>You may find it easier to work with the workbook by changing Microsoft Excel online's <strong>Show Ribbon</strong> option to <strong>Automatically Hide</strong>.</p>
 <p><img alt=" " class="noborder" src="../media/excel-hide-ribbon.png" /></p>
-<p>You can reveal the ribbon by hovering hte mouse pointer over the user initials near the top-right of the web application window.</p>
+<p>You can reveal the ribbon by hovering the mouse pointer over the user initials near the top-right of the web application window.</p>
 </details>
 </details>
 <details class="example">
